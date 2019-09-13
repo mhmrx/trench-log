@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  django:
+    build:
+      dockerfile: testproject/Dockerfile
+      context: ..
+    command: local
+    volumes:
+      - .:/code
+      - ../trench:/trench/trench
+    ports:
+      - '8000:8000'
